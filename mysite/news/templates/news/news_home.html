@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Работы {% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Работы и проекты</h1>
+        <br>
+        {% if news %}
+            {% for el in news %}
+                        <div class="alert alert-warning">
+                            <h3>{{ el.title }}</h3>
+                            <h5>{{ el.anons }}</h5>
+                        </div>
+                    {% endfor %}
+        {% else %}
+            <h5>Нет записей</h5>
+        {% endif %}
+    </div>
+
+
+{% endblock %}
