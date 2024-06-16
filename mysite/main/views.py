@@ -2,13 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-data={
-    'title': 'Главная',
-    'values': ['some', 'none', 'lorem']
-}
-
 def index(request):
-    return render(request, 'main/index.html', data)
+    return render(request, 'main/index.html')
 
 def about(request):
     return render(request, 'main/about.html')
